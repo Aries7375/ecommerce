@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="My first e-commerce" />
+    <title>Academlo Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/log1.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/9248fc5e97.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--==================== LOADER ====================-->
+    <div class="load" id="load">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 48.92 56.48"
+        class="load__gif"
+      >
+        <title>Academlo Logo</title>
+        <g>
+          <g>
+            <path
+              d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z"
+            ></path>
+            <path
+              d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <!--==================== HEADER ====================-->
+    <header>
+      <nav>
+        <div class="logo-list">
+          <a href="#" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48">
+              <title>Academlo Logo</title>
+              <g>
+                <g>
+                  <path
+                    d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z"
+                  ></path>
+                </g>
+              </g></svg
+            >STORE</a
+          >
+          <div class="nav-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#products">Products</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="icons">
+          <!-- <i class="fa-regular fa-moon dark-icon"></i> -->
+          <i class="bx bx-moon dark-icon"></i>
+          <!-- <i class="fa-regular fa-sun light-icon none"></i> -->
+          <i class="bx bx-sun light-icon none"></i>
+          <div class="cart-cont" id="icon-cart">
+            <!-- <i class="fa-solid fa-cart-shopping" id="icon-cart"></i> -->
+            <i class="bx bxs-shopping-bag"></i>
+            <span id="cartCont">0</span>
+          </div>
+          <i class="fa-solid fa-bars menu-icon" id="icon-menu"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== CART ====================-->
+    <div class="cart">
+      <i class="fa-solid fa-xmark exit-icon" id="exit"></i>
+      <h2>My Cart</h2>
+      <div class="cart-img">
+        <img src="./img/empty-cart.png" alt="" />
+        <h2>Your cart is empty</h2>
+        <p>
+          You can add items to your cart by clicking on the "+" button on the
+          product page.
+        </p>
+      </div>
+      <div class="added">
+        <div class="add1 none"></div>
+        <div class="add2 none"></div>
+        <div class="add3 none"></div>
+      </div>
+      <div class="cart-prices">
+        <!-- <span>0 items</span> -->
+        <p><span id="totalItems">0</span> items</p>
+        <!-- <span>$0.00</span> -->
+        <p>TOTAL: &nbsp;&nbsp;$<span id="total">0</span></p>
+      </div>
+      <div class="cart-check">
+        <button id="check">
+          <i class="fa-solid fa-circle-check"></i>
+          Checkout
+        </button>
+      </div>
+    </div>
+
+    <!--==================== MAIN ====================-->
+    <main>
+      <!--==================== HOME ====================-->
+      <section class="home">
+        <div class="home-cont">
+          <div class="home-text">
+            <h1>New Sweatshirt COLLECTIONS 2022</h1>
+            <p>
+              Latest arrival of the new Hanes Midweight Crewneck sweatshirt
+              imported from the 2022 series, with a modern design.
+            </p>
+            <span>$24.00</span>
+            <div class="home-buttons">
+              <button class="home-button1 btn">Discover</button>
+              <button class="home-button2 btn">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="home-img">
+            <img src="./img/home.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!--==================== PRODUCTS ====================-->
+      <section class="products" id="products">
+        <div class="products-cont filters">
+          <ul>
+            <li class="exa" data-filter="all">
+              <h3>Show All</h3>
+              <span>show all products</span>
+            </li>
+            <li class="exa" data-filter=".hoo">
+              <h3>Hoodies</h3>
+              <span>1 product</span>
+            </li>
+            <li class="exa" data-filter=".sh">
+              <h3>Shirts</h3>
+              <span>1 product</span>
+            </li>
+            <li data-filter=".swe">
+              <h3>Sweatshirts</h3>
+              <span>1 product</span>
+            </li>
+          </ul>
+        </div>
+        <div class="products-items">
+          <article class="card card hoo">
+            <div class="item-img">
+              <img src="./img/featured1.png" alt="" />
+            </div>
+            <div class="item-info">
+              <h2>$14.00 <span class="item quantity">| Stock: 9</span></h2>
+              <h3 class="item-name">Hoodies</h3>
+              <button class="item-buttom" id="i0">
+                <i class="bx bx-plus card1 add-btn"></i>
+                <!-- <i class="fa-solid fa-plus card1 add-btn" id="i0"></i> -->
+              </button>
+            </div>
+          </article>
+          <article class="card sh">
+            <div class="item-img">
+              <img src="./img/featured2.png" alt="" />
+            </div>
+            <div class="item-info">
+              <h2>$24.00 <span class="item quantity">| Stock: 15</span></h2>
+              <h3 class="item-name">Shirts</h3>
+              <button class="item-buttom" id="i1">
+                <i class="bx bx-plus card1 add-btn"></i>
+                <!-- <i class="fa-solid fa-plus add-btn card1" id="i1"></i> -->
+              </button>
+            </div>
+          </article>
+          <article class="card swe">
+            <div class="item-img">
+              <img src="./img/featured3.png" alt="" />
+            </div>
+            <div class="item-info">
+              <h2>$24.00 <span class="item quantity">| Stock: 20</span></h2>
+              <h3 class="item-name">Sweatshirts</h3>
+              <button class="item-buttom" id="i2">
+                <i class="bx bx-plus card1 add-btn"></i>
+                <!-- <i class="fa-solid fa-plus add-btn card1" id="i2"></i> -->
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!--==================== FOOTER ====================-->
+      <footer>
+        <div class="footer-cont">
+          <div>
+            <h3>Our information</h3>
+            <p>Toluca - México</p>
+          </div>
+          <div>
+            <h3>About Us</h3>
+            <ul>
+              <li><a href="#">Support Center</a></li>
+              <li><a href="#">Customer Support</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Copy Right</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Product</h3>
+            <ul>
+              <li><a href="#">Hoodies</a></li>
+              <li><a href="#">Shirts</a></li>
+              <li><a href="#">Sweatshirts</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>Social</h3>
+            <ul>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="end">© ACADEMLO. All rigths reserved</p>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
+      integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
