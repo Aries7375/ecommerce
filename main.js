@@ -1,5 +1,3 @@
-/* lo importante es llegar a ROMA*/
-
 const data = [
   {
     img: "./img/featured1.png",
